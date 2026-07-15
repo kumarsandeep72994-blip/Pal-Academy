@@ -1,0 +1,424 @@
+/* ==========================================================================
+   1. गूगल फॉन्ट्स और ग्लोबल सेटिंग्स (Premium Dynamic Look)
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+html {
+    scroll-behavior: smooth; /* पेज बदलने पर एकदम स्मूथ मक्खन जैसा स्क्रॉल */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a1128; /* गहरा और रॉयल नेवी ब्लू बैकग्राउंड */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. नेविगेशन बार (Glowing Navbar)
+   ========================================================================== */
+header {
+    background: rgba(27, 38, 59, 0.9);
+    backdrop-filter: blur(10px); /* पीछे का हिस्सा धुंधला और आधुनिक दिखेगा */
+    border-bottom: 2px solid #e0a96d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    color: #e0a96d;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 10px rgba(224, 169, 109, 0.3);
+}
+
+nav a {
+    color: #e0e1dd;
+    text-decoration: none;
+    margin-left: 22px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* लिंक के नीचे अंडरलाइन एनिमेशन */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #e0a96d;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #e0a96d;
+}
+
+/* मेनू का मुख्य बटन */
+.nav-btn {
+    background: linear-gradient(135deg, #e0a96d, #b07d4d);
+    color: #0d1b2a !important;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(224, 169, 109, 0.4);
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(224, 169, 109, 0.6);
+}
+
+/* ==========================================================================
+   3. मुख्य बैनर (Epic Hero Section)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(10, 17, 40, 0.8), rgba(10, 17, 40, 0.95)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(224, 169, 109, 0.2);
+}
+
+/* असली 3D और चमकता हुआ लोगो */
+.academy-logo {
+    width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(224, 169, 109, 0.5);
+    border: 3px solid #e0a96d;
+    animation: floating 4s ease-in-out infinite; /* हवा में तैरने वाला एनिमेशन */
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero h1 {
+    font-size: 54px;
+    color: #ffffff;
+    margin: 15px 0;
+    font-weight: 800;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.motto {
+    font-size: 18px;
+    color: #e0a96d;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.established {
+    background-color: rgba(224, 169, 109, 0.15);
+    color: #e0a96d;
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #e0a96d;
+    box-shadow: 0 0 15px rgba(224, 169, 109, 0.2);
+}
+
+.poetry {
+    font-style: italic;
+    color: #e0e1dd;
+    font-size: 22px;
+    margin: 35px auto;
+    max-width: 800px;
+    line-height: 1.6;
+    border-left: 4px solid #e0a96d;
+    border-right: 4px solid #e0a96d;
+    padding: 0 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e0a96d, #b07d4d);
+    color: #0d1b2a;
+    padding: 16px 36px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(224, 169, 109, 0.4);
+}
+
+.cta-btn:hover {
+    background: #ffffff;
+    color: #0a1128;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   4. कॉमन सेक्शन सेटिंग्स और हेडिंग्स
+   ========================================================================== */
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-light {
+    background-color: #0f1c3f; /* हल्का कंट्रास्ट देने के लिए रंग */
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #e0a96d, transparent);
+    margin: 0 auto 50px auto;
+}
+
+/* ==========================================================================
+   5. हमारे बारे में (Premium 3D Info Cards)
+   ========================================================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.about-card {
+    background-color: #16223f;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border-bottom: 5px solid #415a77;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: #e0a96d;
+    box-shadow: 0 12px 30px rgba(224, 169, 109, 0.25);
+}
+
+.about-card h3 {
+    color: #e0a96d;
+    font-size: 22px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   6. लाइव बैच और फीस कार्ड्स (VIP Style Rate Cards)
+   ========================================================================== */
+.batch-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.batch-card {
+    background-color: #0a1128;
+    border: 2px solid #23395b;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 340px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* स्पेशल क्लास 11-12 के लिए गोल्डन हाइलाइट */
+.batch-card.standard {
+    border-color: #e0a96d;
+    background: linear-gradient(180deg, #0a1128 0%, #111e3d 100%);
+    box-shadow: 0 10px 30px rgba(224, 169, 109, 0.15);
+}
+
+.batch-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(224, 169, 109, 0.3);
+}
+
+.batch-header {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e0a96d;
+    margin-bottom: 20px;
+}
+
+.batch-price {
+    font-size: 46px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.batch-price span {
+    font-size: 16px;
+    color: #a4c3b2;
+    display: block;
+    margin-top: 5px;
+}
+
+.batch-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    line-height: 2.2;
+}
+
+.batch-features li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 5px;
+}
+
+/* ==========================================================================
+   7. सिलेबस और सुविधाएं (Syllabus & Facilities Section)
+   ========================================================================== */
+.syllabus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.syllabus-box {
+    background: linear-gradient(135deg, #16223f, #0f1c3f);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #e0a96d;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.syllabus-box h4 {
+    color: #e0a96d;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.facilities-list {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 2.4;
+}
+
+.facility-item {
+    background: rgba(224, 169, 109, 0.05);
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px dashed rgba(224, 169, 109, 0.3);
+    transition: 0.3s;
+}
+
+.facility-item:hover {
+    background: rgba(224, 169, 109, 0.15);
+    transform: translateX(5px);
+}
+
+/* ==========================================================================
+   8. संपर्क और प्रीमियम फॉर्म डिज़ाइन (Safe Secure Form)
+   ========================================================================== */
+.contact-container {
+    background-color: #16223f;
+    padding: 35px;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: 0 auto;
+    border: 1px solid rgba(224, 169, 109, 0.2);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* फॉर्म का मुख्य बॉक्स */
+.form-container {
+    background-color: #16223f;
+    border: 2px solid #e0a96d;
+    border-radius: 15px;
+    padding: 45px;
+    max-width: 580px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 40px rgba(224, 169, 109, 0.2);
+}
+
+.form-header h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #e0a96d;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* इनपुट डिब्बे */
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #23395b;
+    border-radius: 8px;
+    background-color: #0a1128;
+    color: white;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #e0a96d;
+    outline: none;
